@@ -4,7 +4,7 @@ import {
   StyleSheet,
   Text,
   View,
-  Alert  
+  Alert
 } from 'react-native';
 
 import {
@@ -24,7 +24,6 @@ import {
 import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
-
 import Home from './components/Home';
 import Search from './components/Search';
 import Post from './components/Post';
@@ -32,14 +31,10 @@ import Profile from './components/Profile';
 import More from './components/More';
 import Placeholder from './components/Placeholder';
 
-
-
 const RouterComponent = () => (
   <Router>
     <Scene key="modal" modal>
       <Stack key="root" hideNavBar>
-
-
 
         {/* Tab Bar */}
         <Scene hideNavBar panHandlers={null} animationEnabled={false} key="tabs">
