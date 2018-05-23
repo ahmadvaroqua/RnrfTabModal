@@ -44,37 +44,24 @@ const RouterComponent = () => (
             swipeEnabled={false}
             showLabel={true}
             tabBarStyle={styles.tabBarStyle}
-		  			activeTintColor="#000000"
+            activeTintColor="#000000"
             activeBackgroundColor="white"
             inactiveBackgroundColor="rgba(255, 255, 255, 0.5)"
             tabBarPosition="bottom"
           >
 
-          	<Scene
-		  				key="Home"
-		  				component={Home}
-		  				title="Home"
-		  			/>
+            <Scene key="Home" component={Home} title="Home" />
+            <Scene key="search" component={Search} title="Search"/>
 
-          	<Scene key="search" component={Search} title="Search"/>
-
-          	<Scene key="placeholder" component={Placeholder} title="Post"
-            	tabBarOnPress={() => {
-              	return Actions.post();
-             	}}
-						/>
-
-            <Scene
-              key="profile"
-              component={Profile}
-              title="Profile"
-              rightTitle="Edit"
-              onRight={() => alert('Right button')}
-              rightButtonTextStyle={{color: 'black'}}
+            <Scene key="placeholder" component={Placeholder} title="Post"
+              tabBarOnPress={() => {
+                return Actions.post();
+              }}
             />
 
+            <Scene key="profile" component={Profile} title="Profile" />
             <Scene key="more" component={More} title="More"/>
-		  		</Tabs>
+          </Tabs>
         </Scene>
 
       </Stack>
